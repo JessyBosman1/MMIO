@@ -1,6 +1,9 @@
 <html>
+<!-- navbar tutorial:
+http://www.w3schools.com/css/css_navbar.asp
+-->
 <title>MMIO JBosman Deliverables</title>
-<head><h1>Deliverables</h1></head>
+<head></head>
 
 <style>
 .inner_frame {
@@ -8,31 +11,81 @@ border: 2px solid black;
 width:33%;  
 padding:30px;
 }
-
 .outer_frame {
 display:none;
+width:100%;
+margin-left:25%;
+}
+button{
+display:inline-block}
+
+.center_text{
+margin-left:25%;
 }
 
 img{
 height:33%;
 width:100%
 }
+
+.ul_sidebar {
+    margin: -5;
+    padding: 5;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+	box-shadow: 8px 8px 8px #999999;
+	overflow: auto;
+}
+
+li a {
+	text-decoration: none;
+    display: block;
+    color: black;
+    padding: 5px 0 5px 5px;   
+}
+
+li a.selected {
+    background-color: #ff1a1a;
+    color: white;
+}
+
+li a:hover:not(.selected) {
+    background-color: #ddd;
+    color: white;
+}
+
 </style>
 
 <body>
 
 <script type="text/javascript">
-
     function visibility(id) {
        if(document.getElementById(id).style.display == 'block')
           document.getElementById(id).style.display = 'none';
        else
+		document.getElementById("week1").style.display = 'none';
+		document.getElementById("week2").style.display = 'none';
+		document.getElementById("week3").style.display = 'none';
+		document.getElementById("week4").style.display = 'none';
           document.getElementById(id).style.display = 'block';
     }
-
 </script>
+<ul class="ul_sidebar">
+  <li><a href="index.html">Home</a></li>
+  <li><a class="selected" href="deliverables.html">Deliverables</a></li>
+  <li><a href="#dump">Dump</a></li>
+  <li><a href="#overmij">Over Mij</a></li>
+</ul>
 
-<button type="button" onclick="visibility('week1');">Week1</button>
+<h1 class="center_text">Deliverables</h1>
+<ul class="buttonlist">
+<button class="center_text" type="button" onclick="visibility('week1');">Week1</button>
+<button  type="button" onclick="visibility('week2');">Week2</button>
+<button  type="button" onclick="visibility('week3');">Week3</button>
+<button  type="button" onclick="visibility('week4');">Week4</button>
+</ul>
 <div class="outer_frame" id="week1">
 <div class="inner_frame">
 
@@ -70,6 +123,20 @@ https://www.youtube.com/watch?v=QM0oVKi3Uug<br>
 Het verslag over de ontwerpen en de uitleg daarbij. Er is gebruik gemaakt van pencil, Photoshop & InDesign.
 <a href="https://drive.google.com/file/d/0ByG7R3zPFDIQeWV2VDNNeEdxREk/view?usp=sharing">Link naar PDF verslag</a>
 </div>
+</div>
+<div class="outer_frame" id="week2">
+week2
+Nog niet beschikbaar
+</div>
+
+<div class="outer_frame" id="week3">
+week3
+Nog niet beschikbaar
+</div>
+
+<div class="outer_frame" id="week4">
+week4
+Nog niet beschikbaar
 </div>
 
 </body>
