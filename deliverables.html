@@ -1,7 +1,4 @@
 <html>
-<!-- navbar tutorial:
-http://www.w3schools.com/css/css_navbar.asp
--->
 <title>MMIO JBosman Deliverables</title>
 <head></head>
 
@@ -13,7 +10,7 @@ padding:30px;
 }
 .outer_frame {
 display:none;
-width:100%;
+width:140%;
 margin-left:25%;
 }
 button{
@@ -24,7 +21,7 @@ margin-left:25%;
 }
 
 img{
-height:33%;
+height:60%;
 width:100%
 }
 
@@ -69,6 +66,7 @@ li a:hover:not(.selected) {
 		document.getElementById("week2").style.display = 'none';
 		document.getElementById("week3").style.display = 'none';
 		document.getElementById("week4").style.display = 'none';
+		document.getElementById("Groepsopdrachten").style.display = 'none';
           document.getElementById(id).style.display = 'block';
     }
 </script>
@@ -85,13 +83,14 @@ li a:hover:not(.selected) {
 <button  type="button" onclick="visibility('week2');">Week2</button>
 <button  type="button" onclick="visibility('week3');">Week3</button>
 <button  type="button" onclick="visibility('week4');">Week4</button>
+<button  type="button" onclick="visibility('Groepsopdrachten');">Groepsopdrachten</button>
 </ul>
 <div class="outer_frame" id="week1">
 <div class="inner_frame">
 
 <h2>Premiere opdracht 1:</h2>
 <br>
-<object data="https://www.youtube.com/v/Gers1QR9bfM" width="100%" height="40%"></object>
+<object data="https://www.youtube.com/v/Gers1QR9bfM" width="100%" height="60%"></object>
 <br>
 Kies één van de clips, en maak er een video bij. <br>
 laad hem in Premiere als audiotrack, en monteer er een collectie clips overheen.<br>
@@ -121,18 +120,15 @@ https://www.youtube.com/watch?v=QM0oVKi3Uug<br>
 <div class="inner_frame">
 <h2>Verslag ontwerp</h2>
 Het verslag over de ontwerpen en de uitleg daarbij. Er is gebruik gemaakt van pencil, Photoshop & InDesign.
-
-<object data="https://drive.google.com/open?id=0ByG7R3zPFDIQeWV2VDNNeEdxREk" type="application/pdf" width="100%" height="50%">
- 
-  <p>Als dit te zien is is er een probleem met de embedded pdf. <a href="https://drive.google.com/open?id=0ByG7R3zPFDIQeWV2VDNNeEdxREk">Klik op deze link om het pdf online te zien.</a></p>
-  
-</object>
-<!--<a href="https://drive.google.com/file/d/0ByG7R3zPFDIQeWV2VDNNeEdxREk/view?usp=sharing">Link naar PDF verslag</a>-->
+<a href="https://drive.google.com/file/d/0ByG7R3zPFDIQeWV2VDNNeEdxREk/view?usp=sharing">Link naar PDF verslag</a>
 </div>
 </div>
 <div class="outer_frame" id="week2">
-week2
-Nog niet beschikbaar
+<div class="inner_frame">
+<h2>User testing:</h2>
+<a href="https://docs.google.com/document/d/1fiPWQzobkbGl0dSJiTpCWlhcM3tk5DMcKWLi6N7jAAk/pub?embedded=true" target="_blank">Bij problemen met het embedded bestand, klik hier</a><br>
+<iframe src="https://docs.google.com/document/d/1fiPWQzobkbGl0dSJiTpCWlhcM3tk5DMcKWLi6N7jAAk/pub?embedded=true" width="100%" height="100%"></iframe>
+</div>
 </div>
 
 <div class="outer_frame" id="week3">
@@ -144,6 +140,18 @@ Nog niet beschikbaar
 week4
 Nog niet beschikbaar
 </div>
+
+<div class="outer_frame" id="Groepsopdrachten" >
+<div class="inner_frame">
+
+<h2>Groepsopdracht week 1:</h2>
+<a href="https://docs.google.com/document/d/14HIL1GBsn2B2kcJIyTcb8xRizS0JxuRMI3XDAQXm_d4/pub?embedded=true" target="_blank">Bij problemen met het embedded bestand, klik hier</a><br>
+<iframe src="https://docs.google.com/document/d/14HIL1GBsn2B2kcJIyTcb8xRizS0JxuRMI3XDAQXm_d4/pub?embedded=true" width="100%" height="100%"></iframe>
+
+</div>
+
+</div>
+
 
 </body>
 </html>
