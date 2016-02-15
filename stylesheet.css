@@ -1,0 +1,44 @@
+
+.inner_frame {
+border: 2px solid black; 
+width:33%;  
+padding:30px;
+}
+.outer_frame {
+display:none;
+width:140%;
+margin-left:25%;
+}
+button{
+display:inline-block}
+.center_text{
+margin-left:25%;
+}
+img{
+height:60%;
+width:100%
+}
+.ul_sidebar {
+    margin: -5;
+    padding: 5;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+	box-shadow: 8px 8px 8px #999999;
+	overflow: auto;
+}
+li a {
+	text-decoration: none;
+    display: block;
+    color: black;
+    padding: 5px 0 5px 5px;   
+}
+li a.selected {
+    background-color: #ff1a1a;
+    color: white;
+}
+li a:hover:not(.selected) {
+    background-color: #ddd;
+    color: white;
+}
