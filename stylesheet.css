@@ -1,44 +1,101 @@
-
 .inner_frame {
-border: 2px solid black; 
-width:33%;  
-padding:30px;
+//border: 2px solid black; 
+width:60%;  
+padding:20px;
+padding-top:50px;
+margin: 20px;
+box-shadow: 8px 8px 8px #555555;
+background:url("post-it6.PNG");
+background-size: 100% 100%;
+font-family: 'Indie Flower';
+
+
+
 }
 .outer_frame {
-display:none;
-width:140%;
+display:block;
+width:75%;
 margin-left:25%;
 }
 button{
-display:inline-block}
-.center_text{
-margin-left:25%;
+display:inline-block
+font-family: 'Bree Serif', serif;
 }
-img{
+
+.center_text{
+font-family: 'Bree Serif', serif;
+}
+button:hover {
+    background-color: red;
+	color: white;
+}
+
+.center {
+    //position: fixed;
+	font-family: 'Bree Serif', serif;
+    margin: auto;
+    width: 40%;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.innerimage{
 height:60%;
 width:100%
 }
+
+img{
+height:33%;
+width:100%
+}
+.userimage{
+position: absolute; 
+left: 35%;
+width:30%;
+height:40%;
+}
+
 .ul_sidebar {
-    margin: -5;
-    padding: 5;
-    width: 10%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-	box-shadow: 8px 8px 8px #999999;
-	overflow: auto;
+    margin: 5px;
+	margin-left: 20%;
+    padding: 5px;
+    width: 75%;
+	height: 100%;
+    //position: fixed;
+    float:left;
 }
+
+li {
+    display: inline;
+	
+}
+
+
 li a {
+
+	margin-left:5%;
+	float: left;
 	text-decoration: none;
-    display: block;
+    display: inline-block;
     color: black;
-    padding: 5px 0 5px 5px;   
+    padding: 5px 0 5px 5px;  	
 }
+
 li a.selected {
     background-color: #ff1a1a;
     color: white;
 }
+
 li a:hover:not(.selected) {
     background-color: #ddd;
     color: white;
+}
+
+body{
+background:url("BG3.JPG");
+background-size: 100% 100%;
+background-repeat: repeat-x;
+background-color: #000000;
+background-attachment: fixed;
 }
