@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900' rel='stylesheet' type='text/css'>
+<style>
+
+.Main {
+    margin:0 auto;
+	margin-top: 80px;
+    width:80%;
+}
+
+
+header {
+
+	background: #f0f0f0;
+	width: 100%;
+	height: 76px;
+	//height: 10vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #5D9CF2;
+	z-index: 100;
+
+}
+
+div:hover nav{
+display:block;
+}
+div:focus nav{
+display:block;
+}
+nav {
+
+	margin: auto;
+	padding: 20px;	
+
+}
+
+
+.button_slide div {
+    height: 0px;
+    display: none;
+}
+.button_slide:focus > div {
+    height: auto;
+    display: block;
+}
+div:hover {
+    height: auto;
+    display: block;
+}
+.button_slide {
+    border-radius: 20px 20px 20px 20px;
+    background: #488BCA;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    //line-height: 60px;
+    margin: 25px 10%;
+    padding: 10px;
+    text-align: center;
+    border: 0;
+    transition: all 1s ease 0s;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+	outline: none;
+}
+.button_slide:hover {
+    background: #3071A9;
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.PDF_embed {
+    border-radius: 20px 20px 20px 20px;
+    width: 60%;
+    height: 800px;
+}
+.Video_embed {
+    width: 60%;
+    height: 500px;
+    box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.75);
+}
+.Powerpoint_embed {
+    border-radius: 20px 20px 20px 20px;
+    frameborder: 0;
+    width: 30%;
+    height: 300px;
+}
+.drive_embed{
+    border-radius: 20px 20px 20px 20px;
+    width: 80%;
+    height: 600px;
+	background:#F0F0F0;
+
+}
+.view_online img:hover{
+box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.75);
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin: 25px 25%;
+}
+
+
+.innerimage{
+height:20%;
+width:60%;
+ border-radius: 33px 33px 33px 33px;
+-moz-border-radius: 33px 33px 33px 33px;
+-webkit-border-radius: 33px 33px 33px 33px;
+}
+
+.nav_menu{
+background: #428BCA;
+width:3%;
+}
+
+
+ul {
+	list-style: none;
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+li {
+	
+	display: inline-block;
+	float: left;
+	padding: 10px;
+
+}
+
+.container_banner{
+	font-family: 'Roboto', sans-serif;
+
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+
+	 border-radius: 33px 33px 33px 33px;
+	-moz-border-radius: 33px 33px 33px 33px;
+	-webkit-border-radius: 33px 33px 33px 33px;
+	text-decoration: none;
+	padding:3%;
+	
+	background: #428BCA;
+    font-size:1.6vw;overflow: hidden;
+	transition: all 1s ease 0s;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	}	
+	
+.container_banner_selected{
+	font-family: 'Roboto', sans-serif;
+
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+
+	 border-radius: 33px 33px 33px 33px;
+	-moz-border-radius: 33px 33px 33px 33px;
+	-webkit-border-radius: 33px 33px 33px 33px;
+	text-decoration: none;
+	padding:3%;
+	
+	background: #428BCA;
+    font-size:1.6vw;overflow: hidden;
+	transition: all 1s ease 0s;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	}	
+.container_banner:hover
+{
+    background: #808080;
+
+}
+
+
+</style>
+
+</head>
+<body>
+<header>
+
+<nav>
+<ul>
+<li class=""><a class="container_banner" href="#">home</a></li>
+<li class=""><a class="container_banner" href="#">deliverables</a></li>
+<li class=""><a class="container_banner_selected" href="#">dump</a></li>
+<!--
+<img src="Buttons/home.png">
+<img src="Buttons/deliverables.png">
+<img src="Buttons/dump.png">
+-->
+</ul>
+</nav>
+</header>
+<div class="Main">
+
+
+    <button class="button_slide">
+        <h1>Individuele opdrachten</h1>
+        <div>
+	             
+            <object class="drive_embed" data="https://drive.google.com/embeddedfolderview?id=0ByG7R3zPFDIQMkhrRmJGdFVGNU0#grid" ></object>
+			
+        </div>
+    </button>
+
+        <button class="button_slide">
+        <h1>Groeps opdrachten</h1>
+        <div>
+	             
+            <object class="drive_embed" data="https://drive.google.com/embeddedfolderview?id=0ByG7R3zPFDIQMkhrRmJGdFVGNU0#grid" ></object>
+			
+        </div>
+    </button>
+	
+	    <button class="button_slide">
+        <h1>Eind opdracht</h1>
+        <div>
+	             
+            <object class="drive_embed" data="https://drive.google.com/embeddedfolderview?id=0B2-7GmCGe3QVS1UxeHMySlEyQ1U#grid" ></object>
+			
+        </div>
+    </button>
+
+</div>
+</body>
+</html>
