@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900' rel='stylesheet' type='text/css'>
+<style>
+
+.Main {
+    margin:0 auto;
+	margin-top: 80px;
+    width:80%;
+}
+
+
+header {
+
+	background: #f0f0f0;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #5D9CF2;
+	z-index: 100;
+
+}
+
+div:hover nav{
+display:block;
+}
+div:focus nav{
+display:block;
+}
+nav {
+
+	margin: auto;
+	padding: 20px;	
+
+}
+
+
+
+/*
+nav{ 
+position: fixed;
+ width: 10%;
+//display:none;
+ z-index: 99999;
+//background-color:rgba(255,255,255,1);
+//box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.75);
+ }
+ 
+ .nav_buttons {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    width: 80%;
+    height: 10%;
+    margin-left:3%;
+	margin-top:2%;
+	margin-bottom:1%;
+    border-radius: 100% 100% 100% 100%;
+    -moz-border-radius: 100% 100% 100% 100%;
+    -webkit-border-radius: 100% 100% 100% 100%;
+    background: #428BCA;
+    transition: all 1s ease 0s;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	}
+	
+	.nav_buttons_selected {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+	width: 80%;
+    height: 10%;
+    margin-left:3%;
+	margin-top:2%;
+	margin-bottom:1%;
+    border-radius: 100% 100% 100% 100%;
+    -moz-border-radius: 100% 100% 100% 100%;
+    -webkit-border-radius: 100% 100% 100% 100%;
+    background: #3071A9;
+    transition: all 1s ease 0s;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	}
+	
+.nav_buttons:hover {
+    background: #808080;
+}
+*/
+.button_slide div {
+    height: 0px;
+    display: none;
+}
+.button_slide:focus > div {
+    height: auto;
+    display: block;
+}
+div:hover {
+    height: auto;
+    display: block;
+}
+.button_slide {
+    border-radius: 20px 20px 20px 20px;
+    background: #488BCA;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    //line-height: 60px;
+    margin: 25px 10%;
+    padding: 10px;
+    text-align: center;
+    border: 0;
+    transition: all 1s ease 0s;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+	outline: none;
+}
+.button_slide:hover {
+    background: #3071A9;
+}
+/*
+a {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0;
+    transition: all 1s ease 0.5s;
+    color: #000000;
+}
+*/
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.PDF_embed {
+    border-radius: 20px 20px 20px 20px;
+    width: 60%;
+    height: 800px;
+}
+.Video_embed {
+    width: 60%;
+    height: 500px;
+    box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.75);
+}
+.Powerpoint_embed {
+    border-radius: 20px 20px 20px 20px;
+    frameborder: 0;
+    width: 30%;
+    height: 300px;
+}
+.view_online img:hover{
+box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.75);
+}
+p {
+font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin: 25px 25%;
+}
+
+
+.innerimage{
+height:20%;
+width:60%;
+ border-radius: 33px 33px 33px 33px;
+-moz-border-radius: 33px 33px 33px 33px;
+-webkit-border-radius: 33px 33px 33px 33px;
+}
+
+.nav_menu{
+background: #428BCA;
+width:3%;
+}
+/*
+.image_child1{ 
+	float:left;
+	height: 60px;
+	width:200%;
+    background:   url("Buttons/home.png")no-repeat;
+    background-position: center;}
+	
+.image_child2{ 
+	float:left;
+	height: 60px;
+	width:200%;
+    background:   url("Buttons/home.png")no-repeat;
+    background-position: center;}
+
+.image_child3{ 
+	float:left;
+	height: 100%;
+	width:200%;
+    background:   url("Buttons/home.png")no-repeat;
+    background-position: center;}	
+*/	
+
+a img{
+width:10%;
+height:60%;
+
+}
+
+ul {
+	width:100%;
+	list-style: none;
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+li {
+	width:30%;
+	display: inline-block;
+	float: left;
+	padding: 10px;
+
+}
+
+.container_banner{
+    font-size:2vw;overflow: hidden;
+}	
+
+
+</style>
+
+</head>
+<body>
+<header>
+
+<nav>
+<ul>
+<li class=""><a class="container_banner" href="#">home</a></li>
+<li class=""><a class="container_banner" href="#">deliverables</a></li>
+<li class=""><a class="container_banner" href="#">dump</a></li>
+<!--
+<img src="Buttons/home.png">
+<img src="Buttons/deliverables.png">
+<img src="Buttons/dump.png">
+-->
+</ul>
+</nav>
+</header>
+<div class="Main">
+
+
+    <button class="button_slide">
+        <h1>tools; Premiere & HTML, CSS</h1>
+        <div>
+            <h2 class="inner_header">Premiere opdracht 1:</h2>
+			            <p>
+                Kies één van de clips, en maak er een video bij.
+                <br> laad hem in Premiere als audiotrack, en monteer er een collectie clips overheen.
+            </p>
+            
+            <object class="Video_embed" data="https://www.youtube.com/v/Gers1QR9bfM?rel=0&amp;vq=hd1080;showinfo=0"></object>
+			
+			<p>
+			<a class="view_online" href="https://www.youtube.com/v/Gers1QR9bfM?rel=0&amp;vq=hd1080;showinfo=0" target="_blank"><img src="onlineimg.png"></a>
+			</p>
+<p>
+                Audio:
+                <br> https://soundcloud.com/royalty-free-creative-commons/epic-trailer-cinematic-002-2royalty-free-creative-commons
+                <br> Video:
+                 <br>https://www.youtube.com/watch?v=LBr7kECsjcQ
+                 https://www.youtube.com/watch?v=QM0oVKi3Uug
+                <br>
+				</p>
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>tools; Pencil, Photoshop, InDesign</h1>
+        <div>
+
+            <h2 class="inner_header">Portfolio Ontwerp1</h2>
+            <img class="innerimage" src="http://i64.tinypic.com/63ul2p.jpg">
+
+
+            <h2 class="inner_header">Portfolio Ontwerp2</h2>
+            <img class="innerimage" src="http://i68.tinypic.com/25ssmlj.jpg">
+
+
+            <h2 class="inner_header">Portfolio Ontwerp3</h2>
+            <img class="innerimage" src="http://i67.tinypic.com/3089njm.jpg">
+
+
+            <h2 class="inner_header">Uitwerking Portfolio ontwerp Photoshop</h2>
+            <img class="innerimage" src="http://i67.tinypic.com/2w1wepy.jpg">
+
+
+            <h2 class="inner_header">Verslag ontwerp</h2> Het verslag over de ontwerpen en de uitleg daarbij. Er is gebruik gemaakt van pencil, Photoshop & InDesign.
+			<object class="PDF_embed" data="https://drive.google.com/file/d/0ByG7R3zPFDIQeWV2VDNNeEdxREk/preview"></object>
+			<p>
+				<a class="view_online" href="https://drive.google.com/file/d/0ByG7R3zPFDIQeWV2VDNNeEdxREk/preview" target="_blank"><img src="onlineimg.png"></a>
+				<a class="view_online" href="https://drive.google.com/uc?export=download&id=0ByG7R3zPFDIQeWV2VDNNeEdxREk" target="_blank"><img src="downloadimg.png"></a>
+			</p>
+
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>Divergent Thinking</h1>
+        <div>
+			<p>
+			Bedenk een product dat recent-gediagnostiseerde diabetes patiënten helpt met het beter begrijpen en het onder de controle krijgen van hun aandoening.
+			</p>
+            <object class="PDF_embed" data="https://drive.google.com/file/d/0ByG7R3zPFDIQTkNnajVoR1pvcTg/preview"></object>
+			<p>	
+				<a class="view_online" href="https://drive.google.com/file/d/0ByG7R3zPFDIQTkNnajVoR1pvcTg/preview" target="_blank"><img src="onlineimg.png"></a>
+				<a class="view_online" href="https://drive.google.com/uc?export=download&id=0ByG7R3zPFDIQTkNnajVoR1pvcTg" target="_blank"><img src="downloadimg.png"></a>
+			</p>   
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>User Testing</h1>
+        <div>
+			<p>
+			Test met een groepje van 3 een (specifiek onderdeel van een) website of app met minimaal 2 testpersonen (first time users).
+			</p>
+            <object class="PDF_embed" data="https://drive.google.com/file/d/0ByG7R3zPFDIQZ2xvUm1DT09NZHc/preview"></object>
+			<p>
+			<a class="view_online" href="https://drive.google.com/file/d/0ByG7R3zPFDIQZ2xvUm1DT09NZHc/view" target="_blank"><img src="onlineimg.png"></a>
+			<a class="view_online" href="https://drive.google.com/uc?export=download&id=0ByG7R3zPFDIQZ2xvUm1DT09NZHc" target="_blank"><img src="downloadimg.png"></a>
+			</p>
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>Information and Structure</h1>
+        <div>
+            <p>Ontwerp een dieetdagboek voor de iPhone. Maak een wireflow van een gebruiker die de applicatie voor het eerst gebruikt. Werk de flow uit in een prototype en doe een gebruikerstest. Zorg dat je wireframes voldoende gedetailleerd zijn.</p>
+
+            <p>Om het prototype te bekijken, download <a href=https://drive.google.com/file/d/0ByG7R3zPFDIQSlVTZzZaaE45Y0U/view> deze file.</a> (Het protype werkt alleen in een offline powerpoint versie.)</p>
+            <p>Bij problemen met het openen, <a href="https://drive.google.com/file/d/0ByG7R3zPFDIQb1FRNnFZd1Vmbms/preview" target="_blank">klik hier</a>
+            </p>
+            <object class="PDF_embed" data="https://drive.google.com/file/d/0ByG7R3zPFDIQb1FRNnFZd1Vmbms/preview" frameborder="0"></object>
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>Social Design</h1>
+        <div>
+            <p>Analyseer de sociale interacties. Benoem de sociale interacties en kijk of je ze kunt linken aan de principes van Cialdini . Welke aanpassing zou je doen ter verbetering van de bestaande sociale interacties? Of welke sociale interactie zou je toevoegen? Onderbouw je aanpassing. Illustreer je aanpassing met een screen design of wireframes.</p>
+
+            <p>Om de speakernotes te zien druk op options > sprekersnotities openen.</p>
+            Bij problemen met het openen, <a href="https://docs.google.com/presentation/d/18gP01P4y3mLnLetd71-gtVyGdmQ3iutI04pa-4sXTyU/edit?usp=sharing" target="_blank">klik hier</a>
+            <br>
+            <object class="Powerpoint_embed" data="https://docs.google.com/presentation/d/18gP01P4y3mLnLetd71-gtVyGdmQ3iutI04pa-4sXTyU/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></object>
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>Visual Design</h1>
+        <div>
+            <p>
+                Maak visual designs van een homepage en product pagina van een sportmerk.
+                <br> Werk deze uit voor gebruik op mobiel en voor grote (desktop) schermen.
+            </p>
+            <p>
+                Bij problemen met het embedded bestand,<a href="https://drive.google.com/file/d/0ByG7R3zPFDIQMFpEUDJsVGgtakE/preview" target="_blank"> klik hier</a>
+            </p>
+            <img scr="AfterEffects.JPG" width="100%" height="600px">
+            <object class="PDF_embed" data="https://drive.google.com/file/d/0ByG7R3zPFDIQMFpEUDJsVGgtakE/preview"></object>
+
+        </div>
+    </button>
+
+    <button class="button_slide">
+        <h1>Video & Audio</h1>
+        <div>
+            <p>
+                Maak een animatie. Dat wil zeggen,
+                <br> je kiest net als in week 1 een kort stukje audio (minimaal 15 seconden, niet langer dan een minuut)
+                <br> en je maakt er een filmpje bij. Dit keer mag je echter geen filmpjes of foto's als bronmateriaal gebruiken,
+                <br> je mag alleen teksten, shapes en effecten gebruiken.
+            </p>
+            <p>
+                AUDIO: https://www.youtube.com/watch?v=ROFsV18qrdQ
+            </p>
+            <p>
+                als de embedded video niet werkt, <a href="https://www.youtube.com/watch?v=1ikHQr2BcjU" target="_blank"> klik hier</a>
+            </p>
+            <object class="Video_embed" data="https://www.youtube.com/v/1ikHQr2BcjU?rel=0&amp;vq=hd1080;showinfo=0"></object>
+        </div>
+    </button>
+</div>
+</body>
+</html>
