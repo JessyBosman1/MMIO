@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Opdracht2</title>
+    <link rel="stylesheet" href="barchart.css">
+  </head>
+  <body>
+    <div id="chart"></div>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+	  
+	  (function(d3) {  
+        'use strict';
+		
+		d3.csv("operating_systems_desktop_april2016.csv", function(dataset) {
+		
+		dataset.forEach(function(d) {
+		d.TotalMarketShare = +d ["TotalMarketShare"]
+		});
+		
+		var color = d3.scale.ordinal()
+		.range(["#483D8B", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+        var width = 360;
+        var height = 360;	
+		
+		 var w = 800,                        //width
+		h = 800,                            //height
+		r = 300,                            //radius
+		color = d3.scale.category20c();  
+	
+        var radius = Math.min(width, height) / 2;
+        var color = d3.scale.category20b();
+		
+		
+		 var vis = d3.select("body")
+        .append("svg:svg")              //create the SVG element inside the <body>
+        .data([dataset])                   //associate our data with the document
+            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+            .attr("height", h)
+        .append("svg:g")                //make a group to hold our pie chart
+            .attr("transform", "translate(" + r + "," + r + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+        .outerRadius(r);
+    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+        .value(function(d) {return d.TotalMarketShare; })   //we must tell it out to access the value of each element in our data array
+    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                .attr("class", "slice");    //allow us to style things in the slices (like text)
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+				
+		
+		var getAngle = function (d) {
+			return (180 / Math.PI * (d.startAngle + d.endAngle) / 2 + 90);
+		}; 
+        arcs.append("svg:text")                                     //add a label to each slice
+				
+				.attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = 200;
+                d.outerRadius = r;
+				d.Angle = 90;
+                return "translate(" + arc.centroid(d) + ") rotate("+ getAngle(d) +")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) {return dataset[i].OperatingSystem; });      //get the label from our original data array
+		
+var curAngle = 0;
+var interval = null;
+
+vis.on("mousedown", function(d) {
+    interval = setInterval(goRotate,10);
+});
+
+vis.on("mouseup", function(d){
+    clearInterval(interval);
+})
+
+function goRotate() {
+    curAngle += 1;
+    vis.attr("transform", "translate(" + width / 2 + "," + height / 2 + ") rotate(" + curAngle + "," + 200 + "," + 200 + ")");
+  }
+		
+		
+		  });
+		  
+      })(window.d3);
+	  
+    </script>
+  </body>
+</html>

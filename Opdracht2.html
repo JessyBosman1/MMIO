@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Opdracht2</title>
+    <link rel="stylesheet" href="barchart.css">
+  </head>
+  <body>
+    <div id="chart"></div>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+	  
+	  (function(d3) {  
+        'use strict';
+	
+		d3.csv("operating_systems_desktop_april2016.csv", function(dataset) {
+		
+		dataset.forEach(function(d) {
+		d.TotalMarketShare = +d ["TotalMarketShare"]
+		});
+		
+		var color = d3.scale.ordinal()
+		.range(["#483D8B", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+        var width = 360;
+        var height = 360;	
+		
+        var radius = Math.min(width, height) / 2;
+        var color = d3.scale.category20b();
+		
+		var vis = d3.select("body")
+			.append("svg:svg")              //create the SVG element inside the <body>
+			.data([dataset])                   //associate our data with the document
+				.attr("width", 800)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+				.attr("height", 800)
+			.append("svg:g")                //make a group to hold our pie chart
+				.attr("transform", "translate(" + 100 + "," + 100 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+		
+        var svg = d3.select('#chart')		
+          .append('svg')
+          .attr('width', width)
+          .attr('height', height)
+          .append('g')
+          .attr('transform', 'translate(' + (width / 2) + 
+            ',' + (height / 2) + ')');
+			
+        var arc = d3.svg.arc()
+			//.innerRadius(radius - 100)
+          .outerRadius(radius);
+        var pie = d3.layout.pie()
+          .value(function(d) {return d.TotalMarketShare; })
+        var path = svg.selectAll('path')
+          .data(pie(dataset))
+          .enter()
+          .append('path')
+          .attr('d', arc)
+	  
+          .attr('fill', function(d, i) {
+            return color(d.data.TotalMarketShare);
+          })
+		  
+		  
+path.append("svg:text")                                     //add a label to each slice
+                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                //we have to make sure to set these before calling arc.centroid
+                d.innerRadius = 0;
+                d.outerRadius = 10;
+                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+            })
+            .attr("text-anchor", "middle")                          //center the text on it's origin
+            .text(function(d, i) { console.log(dataset[i].OperatingSystem);return dataset[i].OperatingSystem; });      //get the label from our original data array
+        
+
+		  });
+		  
+      })(window.d3);
+	  
+    </script>
+  </body>
+</html>
